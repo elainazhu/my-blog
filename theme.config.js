@@ -5,7 +5,7 @@ export default {
     <footer>
       <small>
         <time>{YEAR}</time> © Elaina Zhu.
-        <a href="/feed.xml">RSS</a>
+        <a href="https://stephaniewenxin.wixsite.com/mbimc">Have a beautiful day!</a>
       </small>
       <style jsx>{`
         footer {
