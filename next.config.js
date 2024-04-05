@@ -4,9 +4,11 @@ const withNextra = require("nextra")({
   // optional: add `unstable_staticImage: true` to enable Nextra's auto image import
 });
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  // any configs you need
+module.exports = {
+  ...withNextra(),
+  output: 'export',
+  distDir: 'dist',
+  images: {
+    unoptimized: true,
+  },
 };
-
-module.exports = withNextra(nextConfig);
