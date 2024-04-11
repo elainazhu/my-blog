@@ -4,7 +4,7 @@ export default function Document() {
   const meta = {
     title: "Hello! I'm Elaina Zhu",
     description: "Welcome to my personal website!",
-    image: "self.jpg",
+    image: "/images/self.jpg",
   };
 
   return (
