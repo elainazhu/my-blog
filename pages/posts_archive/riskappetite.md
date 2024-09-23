@@ -1,4 +1,7 @@
-# risk appetite
+---
+title: Risk Appetite
+description: a crazy rant on risk appetite and boys and trading
+---
 I was chatting with my friends about my ideal type 💅 today and I realised that the vibe of a person being from a rich family doesnt really appeal to me as a partner, and i was wondering why. I summarised 2 reasons: my original reason was that they are probably where I am in life now, so if they were poor, the first derivative of their career against time graph would higher, so they would be more successful in the future. But I wasnt really convinced by myself… 
 My friend A mentioned that people from poorer backgrounds have higher risk tolerance/appetite - more entreprenuers were not from a well-to-do background, because they have nothing to lose. If one were rich, they wouldn’t make such risky decisions.
 Later that day, I jaywalked, and that reminded me of the phrase risk appetite again. I realised that I perceive jaywalking as something much more reasonable than most people (calculated jaywalking, of course, please dont harm yourself trying to jaywalk) together with running into the mrt as the doors are closing or running for the bus from across the street. I thought back to my optiver interview (which is happening tmr btw) and a question i found online: what is the riskist decision you have ever made. I think that optiver wants traders with slightly bigger risk appetites 
