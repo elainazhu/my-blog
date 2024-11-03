@@ -20,3 +20,6 @@ Sufrin (as interpreted by me): “I used to do this in lectures – get everyone
 Listening to his story was like watching one of someone else’s core memories – like those in the movie Inside Out. I loved it. It’s one of those memories that makes life worth living – to have one’s eccentricities be deeply appreciated, to teach and make a positive impact on student’s lives, is something that no amount of money can replace – I really want to be a professor when older – and I hope I’ll be a really good professor. 
 
 Yesterday night I arrived in Oxford and felt a sense of joy, and I couldn’t quite place my finger on it. I now think that it’s because this nostalgic city is haunted by good memories like this – not necessarily mine, but I can feel it all around me, from eavesdropping, or through conversations. This city echoes a sense of hope, as I wait in anticipation for more good memories to bechance upon me. But, if all else fails, I’ll always have the method of dance. 
+
+
+<img src="/images/tut.HEIC" alt="Image" width="300" > </img>
