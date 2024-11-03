@@ -22,4 +22,4 @@ Listening to his story was like watching one of someone else’s core memories �
 Yesterday night I arrived in Oxford and felt a sense of joy, and I couldn’t quite place my finger on it. I now think that it’s because this nostalgic city is haunted by good memories like this – not necessarily mine, but I can feel it all around me, from eavesdropping, or through conversations. This city echoes a sense of hope, as I wait in anticipation for more good memories to bechance upon me. But, if all else fails, I’ll always have the method of dance. 
 
 
-<img src="/images/tut.HEIC" alt="Image" width="300" > </img>
+<img src="/images/tut.png" alt="Image" width="300" > </img>
