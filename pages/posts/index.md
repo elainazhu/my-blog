@@ -6,5 +6,5 @@ date: 2021-03-18
 
 # Posts
 
-[**My Pennylane Demo**](https://pennylane.ai/qml/demos/tutorial_post-variational_quantum_neural_networks/).
+[**Pennylane Demo**](https://pennylane.ai/qml/demos/tutorial_post-variational_quantum_neural_networks/).
 
