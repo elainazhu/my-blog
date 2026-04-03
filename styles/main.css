@@ -14,6 +14,12 @@
   font-named-instance: "Italic";
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Inter var", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
@@ -24,7 +30,11 @@ body {
   font-variation-settings: "wght" 450;
   font-variant: common-ligatures contextual;
   letter-spacing: -0.02em;
+  background-color: #111;
+  color: #e0e0e0;
+  line-height: 1.7;
 }
+
 b,
 strong,
 h3,
@@ -35,9 +45,15 @@ h6 {
 }
 h1 {
   font-variation-settings: "wght" 850;
+  font-size: 2em;
+  margin: 0.5em 0;
+  color: #fff;
 }
 h2 {
   font-variation-settings: "wght" 750;
+  font-size: 1.5em;
+  margin: 0.5em 0;
+  color: #fff;
 }
 
 @media screen and (min-device-pixel-ratio: 1.5),
@@ -48,6 +64,46 @@ h2 {
   }
 }
 
+.site-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.nav-line {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #333;
+}
+
+.nav-link {
+  color: #888;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+.prose {
+  max-width: 100%;
+}
+
+.prose p {
+  margin: 1em 0;
+}
+
+.prose a {
+  color: #6cb6ff;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+}
+
 details summary {
   cursor: pointer;
 }
@@ -56,15 +112,26 @@ img.next-image {
   margin: 0;
 }
 
-.prose a {
-  color: #0074de;
-}
-
-.nav-line .nav-link {
-  color: #69778c;
-}
-
 img {
-    display: inline-block;
-    margin-right: 10px;
+  display: inline-block;
+  margin-right: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  margin-top: 8rem;
+  padding-top: 1rem;
+  border-top: 1px solid #333;
+  color: #888;
+}
+
+footer a {
+  color: #888;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #333;
+  margin: 2rem 0;
 }
