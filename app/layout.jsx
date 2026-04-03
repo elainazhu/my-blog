@@ -8,13 +8,13 @@ export const metadata = {
     title: "Hello! I'm Elaina Zhu",
     description: 'Welcome to my personal website!',
     siteName: "Hello! I'm Elaina Zhu",
-    images: ['/images/self.jpg'],
+    images: ['/images/8B084F77-60C8-440E-92BE-7A10AAF4D8CE.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
     title: "Hello! I'm Elaina Zhu",
     description: 'Welcome to my personal website!',
-    images: ['/images/self.jpg'],
+    images: ['/images/8B084F77-60C8-440E-92BE-7A10AAF4D8CE.jpg'],
   },
   robots: 'follow, index',
 }
