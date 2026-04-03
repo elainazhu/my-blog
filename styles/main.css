@@ -135,3 +135,85 @@ hr {
   border-top: 1px solid #333;
   margin: 2rem 0;
 }
+
+/* Place cards — alternating image + text */
+.place-card {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin: 2.5rem 0;
+}
+
+.place-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.place-img {
+  flex: 0 0 45%;
+}
+
+.place-img img {
+  border-radius: 8px;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.place-text {
+  flex: 1;
+}
+
+.place-text h2 {
+  margin-top: 0;
+}
+
+.place-text p {
+  color: #bbb;
+}
+
+@media (max-width: 640px) {
+  .place-card,
+  .place-card.reverse {
+    flex-direction: column;
+  }
+  .place-img {
+    flex: none;
+    width: 100%;
+  }
+}
+
+/* Shops list */
+.shops-list p {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #222;
+}
+
+/* Activities grid */
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.activity img {
+  border-radius: 8px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.activity h3 {
+  margin: 0.75rem 0 0.25rem;
+}
+
+.activity p {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+@media (max-width: 640px) {
+  .activities-grid {
+    grid-template-columns: 1fr;
+  }
+}
