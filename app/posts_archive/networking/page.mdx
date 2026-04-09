@@ -1,0 +1,39 @@
+# Networking Notes
+
+*a quick map of the stack*
+
+---
+
+## Physical Layer
+
+- **NRZ**
+- **Manchester encoding**
+
+---
+
+## Data Link Layer
+
+*frames up to 46–1500 bytes*
+
+- **Ethernet** — carries data frames
+- **Hub vs Switch** — collision domain splitting, source MAC learning
+- **CRC**
+- **LACP** — link aggregation to increase bandwidth
+- [**Spanning Tree Protocol**](/posts_archive/networking/stp) — config / TCN
+- **ERPS**
+
+---
+
+## Network Layer
+
+*packets up to 65535 bytes*
+
+- **CIDR** — subnetting, IP addressing method
+- **DHCP** — get address from server
+- **Unicast**
+- **ARP** — broadcast MAC with IP to L2 network
+- **Distance Vector Protocol** — Bellman–Ford
+- **Link-State Protocol** — Dijkstra
+- **NAT**
+- **IPv4 / IPv6**
+- [**BGP**](/posts_archive/networking/bgp) — path-vector routing between ASes

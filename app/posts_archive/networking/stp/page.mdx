@@ -1,0 +1,39 @@
+# Spanning Tree Protocol (STP)
+
+[← back to Networking Notes](/posts_archive/networking)
+
+---
+
+A **spanning tree** is a subgraph that's a tree and includes every vertex. STP lets switches in a looped network agree on one and block forwarding on the extra links, so Ethernet forwarding only happens along the tree. Switches keep monitoring it and rebuild when things fail.
+
+> **RSTP** works the same way but reconverges much faster.
+
+---
+
+## The Algorithm
+
+1. **Elect a root.** Each switch has an ID = priority + MAC. Lowest ID wins.
+2. **Build a shortest-path tree to the root.** Link cost is inversely proportional to bandwidth.
+3. **Block forwarding on the other links.** They still carry STP's own control frames, but no user traffic.
+
+If a switch stops hearing keep-alives on a link, it stops forwarding in *both* directions (in case the link isn't really down) and recomputes the tree.
+
+---
+
+## BPDUs
+
+STP control messages travel in Ethernet frames addressed to the multicast MAC `01:80:C2:00:00:00`, which tells switches to process rather than forward them. The payload is a **Bridge Protocol Data Unit (BPDU)** with a type field: `0x00` = Config, `0x80` = Topology Change Notification.
+
+### Config messages
+
+Each config BPDU carries the sender's ID, the ID of the switch it believes is the root, and its cost to that root. Only switches that still think they might be root originate new configs; others just update and forward. On each link, the port with the **lowest root path cost** becomes the **designated port** and forwards traffic; the rest are blocked. Ties go to the lowest MAC.
+
+### Keep-alives
+
+The root sends BPDUs every **Hello Time** (default 2 s). It also advertises **Max Age** (default 20 s): how long a switch waits before assuming the path to the root is dead. **Message Age** starts at 0 at the root and increments by 1 s per hop — if it exceeds Max Age, the BPDU is dropped. This assumes ≤ 7 switches between hosts.
+
+---
+
+## Topology Change Notifications
+
+When a switch detects a change, it sends a **TCN** up toward the root. Each switch on the way acks with a **TCA** and forwards the TCN upward. The root then sets the Topology Change flag in its config BPDUs for ~50 s, so everyone else can age out their MAC tables.

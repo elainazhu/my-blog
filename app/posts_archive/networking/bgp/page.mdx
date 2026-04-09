@@ -1,0 +1,54 @@
+# Border Gateway Protocol (BGP)
+
+[← back to Networking Notes](/posts_archive/networking)
+
+---
+
+- the internet = many **Autonomous Systems (ASes)**, each with its own routing policy
+- inside an AS → OSPF / IS-IS, optimize for shortest path
+- between ASes → BGP, optimize for **policy** (who you'll carry traffic for, who you'd rather pay less to)
+- **eBGP** between ASes, **iBGP** to sync that view across routers inside one AS
+
+---
+
+## Mechanics
+
+- **path-vector** protocol — each advertisement carries the full **AS_PATH**
+- loop detection is free: see your own AS in the path → drop
+- sessions run over **TCP/179**
+  - open, exchange capabilities
+  - dump full table once
+  - incremental updates after that (announce / withdraw)
+- TCP session = keep-alive; drop the session → withdraw everything learned from that peer
+
+---
+
+## Path Attributes
+
+- **AS_PATH** — ASes traversed, shorter usually better
+- **NEXT_HOP** — where to forward packets
+- **LOCAL_PREF** — "prefer this exit," set inside your AS, higher wins, not shared with eBGP
+- **MED** — hint to a neighbor AS about which link into you to prefer, lower wins
+- **COMMUNITIES** — opaque tags for policy ("don't export to peers", "prepend twice in Europe")
+
+### Best-path tiebreaker (roughly in order)
+
+1. highest **LOCAL_PREF**
+2. shortest **AS_PATH**
+3. lowest origin type
+4. lowest **MED**
+5. eBGP over iBGP
+6. lowest IGP cost to next hop
+7. lowest router ID
+
+policy > distance
+
+---
+
+## Failure modes
+
+- **trust** — BGP trusts its neighbors
+  - AS announces a prefix it doesn't own → neighbors propagate → traffic pulled to the wrong place
+  - **route leak** vs **hijack** depending on intent
+  - defenses: **RPKI** (signed prefix → origin AS), edge filters. not universal yet
+- **convergence** — a withdrawal can take tens of seconds to minutes to settle globally; every AS on the path re-runs best-path and re-advertises
